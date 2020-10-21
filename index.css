@@ -1,0 +1,26 @@
+.problem {
+  line-height: 2;
+}
+
+.missing-word {
+  width: 65px;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  text-align: center;
+}
+
+.answer {
+  display: none;
+  width: 65px;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
