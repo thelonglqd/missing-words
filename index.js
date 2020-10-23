@@ -1,11 +1,4 @@
-const answers = [
-  "simply",
-  "industry",
-  "standard",
-  "unknown",
-  "remaining",
-  "lorem ipsum",
-];
+const answers = document.getElementById("answer").dataset.answer.split(",");
 
 const inputs = document.getElementsByClassName("missing-word");
 const answerInputs = document.getElementsByClassName("answer");
@@ -27,6 +20,11 @@ for (let i = 0; i < inputs.length; i++) {
   );
 }
 
+const disableButtons = () => {
+  document.getElementById("finishBtn").disabled = true;
+  document.getElementById("checkBtn").disabled = true;
+};
+
 const onCheck = () => {
   for (let i = 0; i < inputs.length; i++) {
     inputs[i].value.trim().toLowerCase() === answers[i]
@@ -36,6 +34,7 @@ const onCheck = () => {
 };
 
 const onFinish = () => {
+  disableButtons();
   for (let i = 0; i < inputs.length; i++) {
     inputs[i].disabled = true;
     inputs[i].style.backgroundColor = "lightgrey";
